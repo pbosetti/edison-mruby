@@ -78,7 +78,23 @@ MRuby::CrossBuild.new('core2-32-poky-linux') do |conf|
 
   conf.gembox 'default'
 
+  conf.gem 'mruby/mrbgems/mruby-hash-ext'
+  conf.gem 'mruby/mrbgems/mruby-eval'
+  conf.gem 'mruby/mrbgems/mruby-exit' # for exiting from within a script
+  conf.gem 'mruby/mrbgems/mruby-string-ext'
+
   #lightweigh regular expression
   conf.gem :github => "pbosetti/mruby-hs-regexp", :branch => "master"
+  conf.gem :github => 'pbosetti/mruby-io', :branch => "master"
+  conf.gem :github => 'pbosetti/mruby-dir', :branch => "master"
+  conf.gem :github => 'pbosetti/mruby-tempfile', :branch => "master"
+  conf.gem :github => 'pbosetti/mruby-yaml', :branch => "master"
+  conf.gem :github => 'pbosetti/mruby-merb', :branch => "master"
+  conf.gem :github => 'UniTN-Mechatronics/mruby-gsl', :branch => "master"
+  conf.gem :github => 'iij/mruby-errno', :branch => 'master'
+  
+  # GEMS INCLUDED AFTER mruby-emb-require WILL BE COMPILED AS SEPARATE object
+  # AND MUST BE LOADED AS require 'mruby-hs-regexp'
+  conf.gem :github => 'pbosetti/mruby-emb-require', :branch => "master"
 
 end
