@@ -92,6 +92,7 @@ MRuby::CrossBuild.new('core2-32-poky-linux') do |conf|
   conf.gem :github => 'pbosetti/mruby-merb', :branch => "master"
   conf.gem :github => 'UniTN-Mechatronics/mruby-gsl', :branch => "master"
   conf.gem :github => 'iij/mruby-errno', :branch => 'master'
+  conf.gem :github => 'pbosetti/mruby-mraa', :branch => 'master'
   
   # GEMS INCLUDED AFTER mruby-emb-require WILL BE COMPILED AS SEPARATE object
   # AND MUST BE LOADED AS require 'mruby-hs-regexp'
