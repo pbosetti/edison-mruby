@@ -86,25 +86,25 @@ MRuby::CrossBuild.new('core2-32-poky-linux') do |conf|
   conf.gem 'mruby/mrbgems/mruby-string-ext'
 
   #lightweigh regular expression
-  conf.gem :github => "pbosetti/mruby-hs-regexp", :branch => "master"
-  conf.gem :github => 'pbosetti/mruby-io', :branch => "master"
-  conf.gem :github => 'pbosetti/mruby-dir', :branch => "master"
-  conf.gem :github => 'pbosetti/mruby-tempfile', :branch => "master"
-  conf.gem :github => 'pbosetti/mruby-yaml', :branch => "master"
-  conf.gem :github => 'pbosetti/mruby-merb', :branch => "master"
-  conf.gem :github => 'pbosetti/mruby-serialport', :branch => 'master'
-  conf.gem :github => 'pbosetti/mruby-shell', :branch => 'master'
-  conf.gem :github => 'pbosetti/mruby-mraa', :branch => 'master'
-  conf.gem :github => 'iij/mruby-pack', :branch => 'master'
-  conf.gem :github => 'iij/mruby-socket', :branch => 'master'
-  conf.gem :github => 'iij/mruby-process', :branch => 'master'
-  conf.gem :github => 'iij/mruby-errno', :branch => 'master'
-  conf.gem :github => 'ksss/mruby-signal', :branch => 'master'
-  conf.gem :github => 'UniTN-mechatronics/mruby-ftp', :branch => 'master'
-  conf.gem :github => 'UniTN-Mechatronics/mruby-fsm', :branch => 'master'
-  conf.gem :github => 'UniTN-Mechatronics/mruby-gsl', :branch => "master"
-  conf.gem :github => 'UniTN-Mechatronics/mruby-mrubot', :branch => "master"
-  conf.gem :github => 'mattn/mruby-sinatic', :branch => 'master'
+  conf.gem :github => 'pbosetti/mruby-hs-regexp'        , :branch => 'master'
+  conf.gem :github => 'pbosetti/mruby-io'               , :branch => 'master'
+  conf.gem :github => 'pbosetti/mruby-dir'              , :branch => 'master'
+  conf.gem :github => 'pbosetti/mruby-tempfile'         , :branch => 'master'
+  conf.gem :github => 'pbosetti/mruby-yaml'             , :branch => 'master'
+  conf.gem :github => 'pbosetti/mruby-merb'             , :branch => 'master'
+  conf.gem :github => 'pbosetti/mruby-serialport'       , :branch => 'master'
+  conf.gem :github => 'pbosetti/mruby-shell'            , :branch => 'master'
+  conf.gem :github => 'pbosetti/mruby-mraa'             , :branch => 'master'
+  conf.gem :github => 'iij/mruby-pack'                  , :branch => 'master'
+  conf.gem :github => 'iij/mruby-socket'                , :branch => 'master'
+  conf.gem :github => 'iij/mruby-process'               , :branch => 'master'
+  conf.gem :github => 'iij/mruby-errno'                 , :branch => 'master'
+  conf.gem :github => 'ksss/mruby-signal'               , :branch => 'master'
+  conf.gem :github => 'UniTN-mechatronics/mruby-ftp'    , :branch => 'master'
+  conf.gem :github => 'UniTN-Mechatronics/mruby-fsm'    , :branch => 'master'
+  conf.gem :github => 'UniTN-Mechatronics/mruby-gsl'    , :branch => 'master'
+  conf.gem :github => 'UniTN-Mechatronics/mruby-mrubot' , :branch => 'master'
+  conf.gem :github => 'mattn/mruby-sinatic'             , :branch => 'master'
   
   # GEMS INCLUDED AFTER mruby-emb-require WILL BE COMPILED AS SEPARATE object
   # AND MUST BE LOADED AS require 'mruby-hs-regexp'

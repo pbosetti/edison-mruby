@@ -29,5 +29,25 @@ Consequently, before `run make.rb` you have to cross-compile and install some li
 
 A detailed guide on how to proceed for cross compiling and installing these (and other) libraries is available [here in this gist](https://gist.github.com/pbosetti/027125c4ba066f51bf2c).
 
+## Available gems
 
-
+- [`pbosetti/mruby-hs-regexp`       ](http://github.com/pbosetti/mruby-hs-regexp       )
+- [`pbosetti/mruby-io`              ](http://github.com/pbosetti/mruby-io              )
+- [`pbosetti/mruby-dir`             ](http://github.com/pbosetti/mruby-dir             )
+- [`pbosetti/mruby-tempfile`        ](http://github.com/pbosetti/mruby-tempfile        )
+- [`pbosetti/mruby-yaml`            ](http://github.com/pbosetti/mruby-yaml            )
+- [`pbosetti/mruby-merb`            ](http://github.com/pbosetti/mruby-merb            )
+- [`pbosetti/mruby-serialport`      ](http://github.com/pbosetti/mruby-serialport      )
+- [`pbosetti/mruby-shell`           ](http://github.com/pbosetti/mruby-shell           )
+- [`pbosetti/mruby-mraa`            ](http://github.com/pbosetti/mruby-mraa            )
+- [`iij/mruby-pack`                 ](http://github.com/iij/mruby-pack                 )
+- [`iij/mruby-socket`               ](http://github.com/iij/mruby-socket               )
+- [`iij/mruby-process`              ](http://github.com/iij/mruby-process              )
+- [`iij/mruby-errno`                ](http://github.com/iij/mruby-errno                )
+- [`ksss/mruby-signal`              ](http://github.com/ksss/mruby-signal              )
+- [`UniTN-mechatronics/mruby-ftp`   ](http://github.com/UniTN-mechatronics/mruby-ftp   )
+- [`UniTN-Mechatronics/mruby-fsm`   ](http://github.com/UniTN-Mechatronics/mruby-fsm   )
+- [`UniTN-Mechatronics/mruby-gsl`   ](http://github.com/UniTN-Mechatronics/mruby-gsl   )
+- [`UniTN-Mechatronics/mruby-mrubot`](http://github.com/UniTN-Mechatronics/mruby-mrubot)
+- [`mattn/mruby-sinatic`            ](http://github.com/mattn/mruby-sinatic            )
+- [`pbosetti/mruby-emb-require`     ](http://github.com/pbosetti/mruby-emb-require     )
