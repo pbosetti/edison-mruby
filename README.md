@@ -21,7 +21,13 @@ The default version of `make.rb` is designed to also build a list of gems that a
 
 Some of those, though, depend on external libraries that are not yet available on Edison's yocto repositories, and namely libyaml and libgsl. 
 
-Consequently, before `run make.rb` you have to cross-compile and install some libraries. A detailed guide on how to proceed is available [here in this gist](https://gist.github.com/pbosetti/027125c4ba066f51bf2c).
+Consequently, before `run make.rb` you have to cross-compile and install some libraries. In particular, the following libraries are required:
+
+- libYAML
+- libUV
+- libGSL
+
+A detailed guide on how to proceed for cross compiling and installing these (and other) libraries is available [here in this gist](https://gist.github.com/pbosetti/027125c4ba066f51bf2c).
 
 
 
