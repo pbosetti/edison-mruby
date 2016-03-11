@@ -21,28 +21,7 @@ The default version of `make.rb` is designed to also build a list of gems that a
 
 Some of those, though, depend on external libraries that are not yet available on Edison's yocto repositories, and namely libyaml and libgsl. 
 
-Consequently, before `run make.rb` you have to cross-compile and install some libraries. Proceed as follows.
-
-#### libYAML
-```bash
-$ curl -O http://pyyaml.org/download/libyaml/yaml-0.1.5.tar.gz
-$ tar xzvf yaml-0.1.5.tar.gz && cd yaml-0.1.5
-$ ./configure --host=i586-poky-linux --prefix=${SDKTARGETSYSROOT}/usr/
-$ make
-$ sudo make install
-```
-
-Now `cp -av ${SDKTARGETSYSROOT}/usr/libyaml* /your/edison/path`. The `-av` switch should preserve symlinks.
+Consequently, before `run make.rb` you have to cross-compile and install some libraries. A detailed guide on how to proceed is available [here in this gist](https://gist.github.com/pbosetti/027125c4ba066f51bf2c).
 
 
-#### GSL - GNU Scientific Library
-```bash
-$ curl -O http://mirrors.muzzy.it/gnu/gsl/gsl-latest.tar.gz
-$ tar xzvf gsl-latest.tar.gx && cd gsl-2.1
-./configure --host=i586-poky-linux --prefix=${SDKTARGETSYSROOT}/usr/
-make
-sudo make install
-```
-
-Now `cp -av ${SDKTARGETSYSROOT}/usr/libyaml* /your/edison/path`. The `-av` switch should preserve symlinks.
 
