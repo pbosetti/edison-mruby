@@ -32,6 +32,9 @@ end
 MRuby::CrossBuild.new('core2-32-poky-linux') do |conf|
   toolchain :gcc
 
+  # Path where require searches for libraries/gems:
+  MRBGEMS_ROOT = "/usr/local/mrblib"
+
   # Mac OS X
   # get SDK from here: https://software.intel.com/en-us/iot/hardware/edison/downloads
   POKY_EDISON_PATH = '/opt/poky-edison/1.7.2'
@@ -39,7 +42,6 @@ MRuby::CrossBuild.new('core2-32-poky-linux') do |conf|
   POKY_EDISON_SYSROOT =  "#{POKY_EDISON_PATH}/sysroots/core2-32-poky-linux"
   POKY_EDISON_X86_PATH = "#{POKY_EDISON_PATH}/sysroots/i386-pokysdk-darwin"
   POKY_EDISON_BIN_PATH = "#{POKY_EDISON_X86_PATH}/usr/bin/i586-poky-linux"
-
 
   conf.cc do |cc|
     cc.command = "#{POKY_EDISON_BIN_PATH}/i586-poky-linux-gcc"
@@ -107,5 +109,8 @@ MRuby::CrossBuild.new('core2-32-poky-linux') do |conf|
   # GEMS INCLUDED AFTER mruby-emb-require WILL BE COMPILED AS SEPARATE object
   # AND MUST BE LOADED AS require 'mruby-hs-regexp'
   conf.gem :github => 'pbosetti/mruby-emb-require', :branch => "master"
+  if g = conf.gems.find {|e| e.name.match /mruby-require/} then
+    g.build.cc.flags << "-DMRBGEMS_ROOT=\\\"#{MRBGEMS_ROOT}\\\""
+  end
 
 end
