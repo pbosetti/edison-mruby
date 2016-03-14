@@ -79,6 +79,10 @@ MRuby::CrossBuild.new('core2-32-poky-linux') do |conf|
   conf.build_mrbtest_lib_only
 
   conf.gembox 'default'
+  
+  # binaries
+  conf.gem 'mruby/mrbgems/mruby-bin-mrbc'
+  conf.gem 'mruby/mrbgems/mruby-bin-strip'
 
   conf.gem 'mruby/mrbgems/mruby-hash-ext'
   conf.gem 'mruby/mrbgems/mruby-eval'
